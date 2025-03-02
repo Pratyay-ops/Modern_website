@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    display: flex;
+    animation: scroll 15s linear infinite;
+    will-change: transform;
+  }
+*/
+
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+}
+
+.logo-track {
+  display: flex;
+  gap: 3rem; /* Increased spacing between logos */
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+/* Fix logo size */
+.logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  width: 150px; /* Ensure fixed width */
+  height: auto;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Moves half the duplicated track */
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+ }
