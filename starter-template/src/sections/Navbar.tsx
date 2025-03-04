@@ -3,8 +3,8 @@
 import Image from "next/image";
 import logoimage from "@/assets/images/logo.svg";
 import Button from "@/components/button";
-import AuthModal from "./auth-modal"; // Renamed from Login to AuthModal for clarity
-
+import AuthModal from "./auth-modal";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import { useState } from "react";
 
 const navLinks = [
@@ -29,9 +29,11 @@ export default function Navbar() {
 
   return (
     <>
-      <section className="bg-opacity-10 py-3 lg:py-6 w-full">
+      <section className="bg-transparent py-3 lg:py-6 w-full fixed top-0 left-0 right-0 z-50">
         <div className="w-full px-4 lg:px-8">
-          <div className="w-full flex items-center justify-between border border-white/10 rounded-full p-2 px-6">
+          {/* Wrapping div to ensure the scroll progress bar stays inside */}
+          <div className="relative w-full flex items-center justify-between border border-white/10 rounded-full p-2 px-6 bg-black/80 backdrop-blur-md">
+            
             <div className="flex items-center gap-3">
               <Image
                 src={logoimage}
@@ -93,6 +95,11 @@ export default function Navbar() {
               >
                 Sign Up
               </Button>
+            </div>
+
+            {/* Scroll Progress Bar inside the navbar */}
+            <div className="absolute bottom-0 -left-0.5 px-6 w-full h-[3px] overflow-hidden rounded-b-full">
+              <ScrollProgress className="w-full h-1" />
             </div>
           </div>
 

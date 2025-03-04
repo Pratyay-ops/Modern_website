@@ -26,8 +26,8 @@ const libreFranklin = Libre_Franklin({
 });
 
 export const metadata: Metadata = {
-    title: "Modern Design Tool Landing Page",
-    description: "Created with the help of Frontend Tribe",
+    title: "Kulturr: Anime Merchandise Store",
+    description: "Created by JU Anime Store",
 };
 
 export default function RootLayout({
