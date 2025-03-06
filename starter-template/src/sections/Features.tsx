@@ -98,7 +98,7 @@ export default function Features() {
                         )}
                     </FeatureCard>
                     <FeatureCard 
-                    title="Our Offerings" 
+                    title="Our Collections" 
                     description="We are giving you opportunity to get your own custom designs and choices of posters and stickers!"
                     className='col-span-2 lg:col-span-1'>
                         <div className='relative w-52 h-52 border-2 border-blue-950 rounded-lg overflow-hidden mx-auto'>

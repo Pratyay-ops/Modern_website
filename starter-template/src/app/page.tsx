@@ -4,6 +4,7 @@ import LogoTicker from "@/sections/LogoTicker";
 import Introduction from "@/sections/Introduction"
 import Features from "@/sections/Features";
 import Salebanner from "@/sections/salebanner";
+import { Marquee3D } from "@/sections/Integrations";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <Salebanner />
             <Introduction />
             <Features />
+            <Marquee3D />
         </>
     );
 }
